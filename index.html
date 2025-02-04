@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MRT Fare Guide</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background: url();
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 10px;
+        }
+        .content img{
+            max-width: 45%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>MRT Fare Guide</h1>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="iriga.png" class="rounded" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="page2.html">Transit Schedule</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="page3.html">Tips</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-2 mt-md-0">
+                    <input class="form-control me-2" type="text" placeholder="Search...">
+                    <button class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left: Image -->
+            <div class="col-md-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Manila_LRT-MRT_map.png/800px-Manila_LRT-MRT_map.png" class="img-fluid">
+            </div>
+
+            <!--Right: Dropdown Forms-->
+            <div class="col-md-6 text-start">
+                <form>
+                <h1>MRT Southbound Trip:</h1>
+                    <p>Going from North Avenue station to Taft Avenue station.</p>
+                    <label class="form-label">From:</label>
+                    <select class="form-select mb-3" id="fromStation">
+                        <option value="none">Choose your nearest station...</option>
+                        <option value="0">North Avenue</option>
+                        <option value="0">Quezon Avenue</option>
+                        <option value="0">GMA-Kamuning</option>
+                        <option value="0">Araneta-Cubao</option>
+                        <option value="0">Santolan-Annapolis</option>
+                        <option value="0">Ortigas</option>
+                        <option value="0">Shaw Boulevard</option>
+                        <option value="0">Boni</option>
+                        <option value="0">Guadalupe</option>
+                        <option value="0">Buendia</option>
+                        <option value="0">Ayala</option>
+                        <option value="0">Magallanes</option>
+                        <option value="0">Taft Avenue</option>
+                    </select>
+
+                    <label class="form-label">To:</label>
+                    <select class="form-select mb-3" id="toStation">
+                        <option value="none">Choose your destination...</option>
+                        <option value="13">Quezon Avenue</option>
+                        <option value="13">GMA-Kamuning</option>
+                        <option value="16">Araneta-Cubao</option>
+                        <option value="16">Santolan-Annapolis</option>
+                        <option value="20">Ortigas</option>
+                        <option value="20">Shaw Boulevard</option>
+                        <option value="20">Boni</option>
+                        <option value="24">Guadalupe</option>
+                        <option value="24">Buendia</option>
+                        <option value="24">Ayala</option>
+                        <option value="28">Magallanes</option>
+                        <option value="28">Taft Avenue</option>
+                    </select>
+
+                    <label class="form-label">Student, Elderly, or PWD?</label>
+                    <select class="form-select mb-3" id="Discount">
+                        <option value="none">Select here...</option>
+                        <option value="-20%">Student</option>
+                        <option value="-20%">Elderly</option>
+                        <option value="-20%">PWD</option>
+                    </select>
+
+                    <button type="button" class="btn btn-success" onclick="calculateFare()">Calculate Fare</button>
+
+                <br>
+
+                <h1>MRT Northbound Trip:</h1>
+                    <p>Going from Taft Avenue station to North Avenue station.</p>
+                    <label class="form-label">From:</label>
+                    <select class="form-select mb-3" id="fromStation">
+                        <option value="none">Choose your nearest station...</option>
+                        <option value="0">Taft Avenue</option>
+                        <option value="0">Magallanes</option>
+                        <option value="0">Ayala</option>
+                        <option value="0">Buendia</option>
+                        <option value="0">Guadalupe</option>
+                        <option value="0">Boni</option>
+                        <option value="0">Shaw Boulevard</option>
+                        <option value="0">Ortigas</option>
+                        <option value="0">Santolan-Annapolis</option>
+                        <option value="0">Araneta-Cubao</option>
+                        <option value="0">GMA-Kamuning</option>
+                        <option value="0">Quezon Avenue</option>
+                        <option value="0">North Avenue</option>
+                    </select>
+
+                    <label class="form-label">To:</label>
+                    <select class="form-select mb-3" id="toStation">
+                        <option value="none">Choose your destination...</option>
+                        <option value="13">Magallanes</option>
+                        <option value="13">Ayala</option>
+                        <option value="16">Buendia</option>
+                        <option value="16">Guadalupe</option>
+                        <option value="20">Boni</option>
+                        <option value="20">Shaw Boulevard</option>
+                        <option value="20">Ortigas</option>
+                        <option value="24">Santolan Annapolis</option>
+                        <option value="24">Araneta-Cubao</option>
+                        <option value="24">GMA-Kamuning</option>
+                        <option value="28">Quezon Avenue</option>
+                        <option value="28">North Avenue</option>
+                    </select>
+
+                    <label class="form-label">Student, Elderly, or PWD?</label>
+                    <select class="form-select mb-3" id="specialDiscount">
+                        <option value="none">Select here...</option>
+                        <option value="-20%">Student</option>
+                        <option value="-20%">Elderly</option>
+                        <option value="-20%">PWD</option>
+                    </select>
+
+                    <button type="button" class="btn btn-success" onclick="calculateFare()">Calculate Fare</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateFare(){
+            var fromStation = document.getElementById("fromStation").value;
+            var toStation = document.getElementById("toStation").value;
+            var Discount = document.getElementById("specialDiscount").value;
+            window.alert("From: " + fromStation + "\nTo: " + toStation);
+        }
+    </script>
+</body>
+</html>
