@@ -3,11 +3,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MRT Fare Guide</title>
+    <title>LRT-1 Fare Guide</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
     <style>
         body{
-            background: radial-gradient();
+            background: url(https://i.pinimg.com/736x/d9/67/29/d96729593b1c9c2f191efef04826dffd.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position: absolute;
+            background-attachment: fixed;
+            font-family: "Kosugi Maru", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .kosugi-maru-regular{
+            font-family: "Kosugi Maru", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
         .content{
             display: flex;
@@ -27,7 +44,7 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: white;
-            opacity: 95%;
+            opacity: 90%;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
@@ -42,20 +59,6 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        .container3{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            width: 95%;
-            background-color: #f3c9d4;
-            opacity: 90%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
-        }
         .container4{
             display: flex;
             flex-direction: column;
@@ -64,204 +67,116 @@
             padding: 30px;
             border: 1px solid #ccc;
             border-radius: 10px;
-            width: 95%;
+            width: 90%;
             background-color: #b9dbb3;
             opacity: 90%;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             margin: 50px auto;
         }
-        .container5, .container6{
-            background-color: #e5e5e5;
+        .container5{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin-left: 450px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            opacity: 90%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 800px;
+        }
+        .container6{
+            background-color: white;
             padding: 5px;
             border: 1px solid #ccc;
             border-radius: 10px;
-        }
-        .container7{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            width: 95%;
-            background-color: #b9dbb3;
-            opacity: 90%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 50px auto;
-            background-color: #3067f2;
+            width: 1400px;
         }
         button.btn-successw-100, button.btn-warningw-100{
             width: 100%; 
         }
         .navbar{
-            background-color: #b3dbb3;
+            background-color: #f8cfbb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
         }
         img{
             border-radius: 10px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .navbar-nav .nav-item .nav-link{
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar-nav .nav-item .nav-link:hover{
+            color: #ff00e6 !important;
+        }
+        .navbar-brand img{
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar-brand img:hover{
+            transform: scale(1.1);
+        }
+        table, tr, td{
+            border: 2px solid black;
+            align-content: center;
+        }
+        table{
+            padding: 35px;
+        }
+        td{
+            font-family: Rockwell;
+            font-size: 27px;
+        }
+        th{
+            font-size: 20px;
+            text-align: center;
+        }
+        ul{
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
                 <img src="railway.png" class="rounded" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Navbar Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav mx-auto">
+
+            <div class="collapse navbar-collapse text-center" id="navbarContent">
+                <ul class="navbar-nav mx-auto justify-content-center">
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#home" onclick="scrollToSection('home')">Home</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="page2.html">Transit Schedule</a>
+                        <a class="nav-link" href="#schedule" onclick="scrollToSection('schedule')">Transit Schedule</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="page3.html">Tips</a>
+                        <a class="nav-link" href="#tips" onclick="scrollToSection('tips')">Tips</a>
                     </li>
                 </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex mt-2 mt-md-0">
+                    <input class="form-control me-2" type="text" placeholder="Search...">
+                    <button class="btn btn-success" type="button"><i class="fas fa-search"></i></button>
+                </form>
             </div>
         </div>
     </nav>
 
-    <br><br><br>
-
-    <div class="container3 bg-warning">
-    <center>
-        <div class="container5">
-            <h1>MRT-3 Fare Guide</h1>
-        </div>
-    </center>
-
-    <br>
-
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left: Image -->
-            <div class="col-md-6">
-                <img src="https://www.deiville.com/wp-content/uploads/2023/03/map-of-lrt-line-1-2-and-mrt-3-stations.jpg" class="img-fluid">
-            </div>
-
-            <!--Right: Dropdown Forms-->
-            <div class="col-md-6 text-start">
-                <div class="container1">
-                <form>
-                <h2>MRT Southbound Trip:</h2>
-                    <p>Going from North Avenue station to Taft Avenue station.</p>
-                    <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation1">
-                        <option value="none">Choose your nearest station...</option>
-                        <option value="0">North Avenue</option>
-                        <option value="0">Quezon Avenue</option>
-                        <option value="0">GMA-Kamuning</option>
-                        <option value="0">Araneta-Cubao</option>
-                        <option value="0">Santolan-Annapolis</option>
-                        <option value="0">Ortigas</option>
-                        <option value="0">Shaw Boulevard</option>
-                        <option value="0">Boni</option>
-                        <option value="0">Guadalupe</option>
-                        <option value="0">Buendia</option>
-                        <option value="0">Ayala</option>
-                        <option value="0">Magallanes</option>
-                        <option value="0">Taft Avenue</option>
-                    </select>
-
-                    <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation1">
-                        <option value="none">Choose your destination...</option>
-                        <option value="13">Quezon Avenue</option>
-                        <option value="13">GMA-Kamuning</option>
-                        <option value="16">Araneta-Cubao</option>
-                        <option value="16">Santolan-Annapolis</option>
-                        <option value="20">Ortigas</option>
-                        <option value="20">Shaw Boulevard</option>
-                        <option value="20">Boni</option>
-                        <option value="24">Guadalupe</option>
-                        <option value="24">Buendia</option>
-                        <option value="24">Ayala</option>
-                        <option value="28">Magallanes</option>
-                        <option value="28">Taft Avenue</option>
-                    </select>
-
-                    <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount">
-                        <option value="none">Select here...</option>
-                        <option value="0">Regular</option>
-                        <option value="0.20">Student</option>
-                        <option value="0.20">Elderly</option>
-                        <option value="0.20">PWD</option>
-                    </select>
-
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-warning w-100" onclick="calculateFare1()">Calculate Fare</button>
-                </div>
-            </div>
-
-                <br>
-
-            <div class="container2">
-                <h2>MRT Northbound Trip:</h2>
-                    <p>Going from Taft Avenue station to North Avenue station.</p>
-                    <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation2">
-                        <option value="none">Choose your nearest station...</option>
-                        <option value="0">Taft Avenue</option>
-                        <option value="0">Magallanes</option>
-                        <option value="0">Ayala</option>
-                        <option value="0">Buendia</option>
-                        <option value="0">Guadalupe</option>
-                        <option value="0">Boni</option>
-                        <option value="0">Shaw Boulevard</option>
-                        <option value="0">Ortigas</option>
-                        <option value="0">Santolan-Annapolis</option>
-                        <option value="0">Araneta-Cubao</option>
-                        <option value="0">GMA-Kamuning</option>
-                        <option value="0">Quezon Avenue</option>
-                        <option value="0">North Avenue</option>
-                    </select>
-
-                    <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation2">
-                        <option value="none">Choose your destination...</option>
-                        <option value="13">Magallanes</option>
-                        <option value="13">Ayala</option>
-                        <option value="16">Buendia</option>
-                        <option value="16">Guadalupe</option>
-                        <option value="20">Boni</option>
-                        <option value="20">Shaw Boulevard</option>
-                        <option value="20">Ortigas</option>
-                        <option value="24">Santolan Annapolis</option>
-                        <option value="24">Araneta-Cubao</option>
-                        <option value="24">GMA-Kamuning</option>
-                        <option value="28">Quezon Avenue</option>
-                        <option value="28">North Avenue</option>
-                    </select>
-
-                    <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount2">
-                        <option value="none">Select here...</option>
-                        <option value="0">Regular</option>
-                        <option value="0.2">Student</option>
-                        <option value="0.2">Elderly</option>
-                        <option value="0.2">PWD</option>
-                    </select>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-warning w-100" onclick="calculateFare2()">Calculate Fare</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <br>
-
-    <div class="container4">
+    <div class="container4" id="home">
     <center>
         <div class="container6">
             <h1>LRT-1 Fare Guide</h1>
@@ -284,7 +199,7 @@
                 <h2>LRT-1 Southbound Trip:</h2>
                     <p>Going from Roosevelt station to Baclaran.</p>
                     <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation3">
+                    <select class="form-select mb-3" id="fromStation">
                         <option value="none">Choose your nearest station...</option>
                         <option value="0">Roosevelt</option>
                         <option value="0">Balintawak</option>
@@ -309,7 +224,9 @@
                     </select>
 
                     <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation3">
+                    <select class="form-select mb-3" id="toStation">
+                        <option value="none">Choose your destination...</option>
+                        <option value="0">Roosevelt</option>
                         <option value="20">Balintawak</option>
                         <option value="20">Monumento</option>
                         <option value="20">5th Avenue</option>
@@ -332,7 +249,7 @@
                     </select>
 
                     <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount3">
+                    <select class="form-select mb-3" id="specialDiscount">
                         <option value="none">Select here...</option>
                         <option value="0">Regular</option>
                         <option value="0.20">Student</option>
@@ -341,7 +258,10 @@
                     </select>
 
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-success w-100" onclick="calculateFare3()">Calculate Fare</button>
+                    <button type="button" class="btn btn-success w-100" 
+                        onclick="calculateFare1('fromStation', 'toStation', 'specialDiscount')">
+                        Calculate Fare
+                    </button>
                 </div>
             </div>
 
@@ -351,8 +271,8 @@
                 <h2>LRT-1 Northbound Trip:</h2>
                     <p>Going from Baclaran station to Roosevelt station.</p>
                     <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation4">
-                        <option value="none">Choose your destination...</option>
+                    <select class="form-select mb-3" id="fromStation2">
+                        <option value="none">Choose your nearest station...</option>
                         <option value="0">Baclaran</option>
                         <option value="0">EDSA</option>
                         <option value="0">Libertad</option>
@@ -376,8 +296,9 @@
                     </select>
 
                     <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation4">
+                    <select class="form-select mb-3" id="toStation2">
                         <option value="none">Choose your destination...</option>
+                        <option value="0">Baclaran</option>
                         <option value="15">EDSA</option>
                         <option value="15">Libertad</option>
                         <option value="20">Gil Puyat</option>
@@ -400,7 +321,7 @@
                     </select>
 
                     <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount4">
+                    <select class="form-select mb-3" id="specialDiscount2">
                         <option value="none">Select here...</option>
                         <option value="0">Regular</option>
                         <option value="0.2">Student</option>
@@ -409,7 +330,10 @@
                     </select>
 
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-success w-100" onclick="calculateFare4()">Calculate Fare</button>
+                    <button type="button" class="btn btn-success w-100" 
+                        onclick="calculateFare2('fromStation2', 'toStation2', 'specialDiscount2')">
+                        Calculate Fare
+                    </button>
                     </div>
                 </div>
                 </form>
@@ -418,245 +342,158 @@
     </div>
     </div>
 
+    <br><br>
+
+    <div class="container5" class="container text-center mx-auto" id="schedule">
+        <center>
+            <h2>Transit Schedule</h2>
+        </center>
+    </div>
+
     <br>
 
-    <div class="container7">
+    <table class="table table-responsive table-striped">
+        <th>Transit Line</th>
+        <th>Operating Hours</th>
+        <tr class="table">
+            <td class="text-center">LRT-1</td>
+            <td style="font-size: 20px;" class="text-center"><p>4:30am - 10:00pm</p>
+                <p>First Departure from Roosevelt: 4:30am (Weekdays), 5:00am (Weekends, Holidays)</p>
+                <p>Last Departure from Roosevelt: 10:15pm (Weekdays), 9:45pm (Weekends, Holidays)</p>
+                <p>First Departure from Baclaran: 4:30am (Weekdays), 5:00am (Weekends, Holidays)</p>
+                <p>Last Departure from Baclaran: 10:15pm (Weekdays), 9:45pm (Weekends, Holidays)</p>
+            </td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <div class="container4" id="tips">
     <center>
         <div class="container6">
-            <h1>LRT-2 Fare Guide</h1>
+            <h1><b>Tips for Commuting with the LRT</b></h1>
         </div>
     </center>
 
     <br>
 
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left: Image -->
-            <div class="col-md-6">
-                <img src="https://www.deiville.com/wp-content/uploads/2023/03/map-of-lrt-line-1-2-and-mrt-3-stations.jpg" class="img-fluid">
-            </div>
-
-            <!--Right: Dropdown Forms-->
-            <div class="col-md-6 text-start">
-                <div class="container1">
-                <form>
-                <h2>LRT-2 Westbound Trip:</h2>
-                    <p>Going from Antipolo station to Recto station.</p>
-                    <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation5">
-                        <option value="none">Choose your nearest station...</option>
-                        <option value="0">Antipolo</option>
-                        <option value="0">Marikina</option>
-                        <option value="0">Santolan</option>
-                        <option value="0">Katipunan</option>
-                        <option value="0">Anonas</option>
-                        <option value="0">Araneta-Cubao</option>
-                        <option value="0">Betty Go-Belmonte</option>
-                        <option value="0">Gilmore</option>
-                        <option value="0">J. Ruiz</option>
-                        <option value="0">V. Mapa</option>
-                        <option value="0">Pureza</option>
-                        <option value="0">Legarda</option>
-                        <option value="0">Recto</option>
-                    </select>
-
-                    <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation5">
-                        <option value="none">Choose your destination...</option>
-                        <option value="20">Marikina</option>
-                        <option value="20">Santolan</option>
-                        <option value="25">Katipunan</option>
-                        <option value="25">Anonas</option>
-                        <option value="25">Araneta-Cubao</option>
-                        <option value="25">Betty Go-Belmonte</option>
-                        <option value="30">Gilmore</option>
-                        <option value="30">J. Ruiz</option>
-                        <option value="30">V. Mapa</option>
-                        <option value="30">Pureza</option>
-                        <option value="35">Legarda</option>
-                        <option value="35">Recto</option>
-                    </select>
-
-                    <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount5">
-                        <option value="none">Select here...</option>
-                        <option value="0">Regular</option>
-                        <option value="0.20">Student</option>
-                        <option value="0.20">Elderly</option>
-                        <option value="0.20">PWD</option>
-                    </select>
-
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-warning w-100" onclick="calculateFare5()">Calculate Fare</button>
-                </div>
-            </div>
+    <div class="container6">
+        <center>
+            <p style="font-size: 36px;">How to Purchase Tickets</p>
+                <ul>Find the ticket vending machine or booth at any station.</ul>
+                <ul>Pick either a single-journey ticket or load your Beep card.</ul>
+                <ul>For Beep cards, you can tap them at the turnstile to access them, and you can use them until your balance runs out.</ul>
+                <ul>Using a Beep card saves time and ensures quicker entry and exit through busy stations, making it a better option for daily riders.</ul>
 
                 <br>
 
-            <div class="container2">
-                <h2>LRT-2 Eastbound Trip:</h2>
-                    <p>Going from Recto station to Antipolo station.</p>
-                    <label class="form-label">From:</label>
-                    <select class="form-select mb-3" id="fromStation6">
-                        <option value="none">Choose your nearest station...</option>
-                        <option value="0">Recto</option>
-                        <option value="0">Legarda</option>
-                        <option value="0">Pureza</option>
-                        <option value="0">V. Mapa</option>
-                        <option value="0">J. Ruiz</option>
-                        <option value="0">Gilmore</option>
-                        <option value="0">Betty Go-Belmonte</option>
-                        <option value="0">Araneta-Cubao</option>
-                        <option value="0">Anonas</option>
-                        <option value="0">Katipunan</option>
-                        <option value="0">Santolan</option>
-                        <option value="0">Marikina</option>
-                        <option value="0">Antipolo</option>
-                    </select>
+            <p style="font-size: 36px;">Operating Hours</p>
+                <ul>The Manila LRT-1 operates from 4:30 AM to 10:00 PM, Monday through Sunday.</ul>
+                <br>
+                <ul>Expect some changes in operation hours during public holidays or major city events.</ul>
+                <ul>Early risers and late travelers should plan their journeys carefully to avoid missing the last train.</ul>
 
-                    <label class="form-label">To:</label>
-                    <select class="form-select mb-3" id="toStation6">
-                        <option value="none">Choose your destination...</option>
-                        <option value="15">Legarda</option>
-                        <option value="20">Pureza</option>
-                        <option value="20">V. Mapa</option>
-                        <option value="20">J. Ruiz</option>
-                        <option value="25">Gilmore</option>
-                        <option value="25">Betty Go-Belmonte</option>
-                        <option value="25">Araneta-Cubao</option>
-                        <option value="25">Anonas</option>
-                        <option value="30">Katipunan</option>
-                        <option value="30">Santolan</option>
-                        <option value="35">Marikina</option>
-                        <option value="35">Antipolo</option>
-                    </select>
+                <br>
 
-                    <label class="form-label">Regular or Special?</label>
-                    <select class="form-select mb-3" id="specialDiscount6">
-                        <option value="none">Select here...</option>
-                        <option value="0">Regular</option>
-                        <option value="0.2">Student</option>
-                        <option value="0.2">Elderly</option>
-                        <option value="0.2">PWD</option>
-                    </select>
+        <p style="font-size: 36px;">Make Your Journey Hassle-Free and Stress-Free</p>
+                <ul>Use Commuter Apps like Google Maps to map out your LRT-1 ride</ul>
+                <ul>Reload your card in advance to avoid long queues</ul>
+                <ul>Travel during Off-Peak Hours to see fewer passengers</ul>
+                <ul>Mind Your Belongings</ul>
 
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-warning w-100" onclick="calculateFare6()">Calculate Fare</button>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                <br>
+
+        <p style="font-size: 36px;">Customer Etiquette Tips</p>
+                <ul>Always queue properly when boarding or waiting for trains.</ul>
+                <ul>Prioritise designated seats for the elderly, pregnant women, and PWDs</ul>
+                <ul>Avoid blocking doors to ensure easier and faster boarding for everyone.</ul>
+        </center>
     </div>
 
-    <script> //five stages of grief core😔😔
-    //MRT-3
-        function calculateFare1(){
-            let fromStation1 = document.getElementById("fromStation1").value;
-            let toStation1 = document.getElementById("toStation1").value;
-            let discount = document.getElementById("specialDiscount").value;
-            
-            if (fromStation1 === "none" || toStation1 === "none"){
-                alert("Please select both stations.");
-                return;
-            }
-            let baseFare = Number(toStation1); //aaaaaaaaaaaaaaaaaa
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
-
-            alert(`From: ${document.getElementById("fromStation1").selectedOptions[0].text}
-To: ${document.getElementById("toStation1").selectedOptions[0].text}
-Fare: PHP ${finalFare.toFixed(2)}`);
-        }
-
-        function calculateFare2(){
-            let fromStation2 = document.getElementById("fromStation2").value;
-            let toStation2 = document.getElementById("toStation2").value;
-            let discount = document.getElementById("specialDiscount2").value;
-            
-            if (fromStation2 === "none" || toStation2 === "none"){
-                alert("Please select both stations.");
-                return;
-            }
-            let baseFare = Number(toStation2);
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
-
-            alert(`From: ${document.getElementById("fromStation2").selectedOptions[0].text}
-To: ${document.getElementById("toStation2").selectedOptions[0].text}
-Fare: PHP ${finalFare.toFixed(2)}`); //nakakaiyak😭
-        }
-
+    <script> 
 
     //LRT-1
-        function calculateFare3(){
-            let fromStation3 = document.getElementById("fromStation3").value;
-            let toStation3 = document.getElementById("toStation3").value;
-            let discount = document.getElementById("specialDiscount3").value;
+        function calculateFare1(fromStation, toStation, specialDiscount){
+            let fromStationElement = document.getElementById(fromStation);
+            let toStationElement = document.getElementById(toStation);
+            let discountElement = document.getElementById(specialDiscount);
             
-            if (fromStation3 === "none" || toStation3 === "none"){
+            let fromStationValue = parseInt(fromStationElement.value);
+            let toStationValue = parseInt(toStationElement.value);
+            let discountValue = parseFloat(discountElement.value);
+
+            // Ensure valid selections
+            if (isNaN(fromStationValue) || isNaN(toStationValue)){
                 alert("Please select both stations.");
                 return;
             }
-            let baseFare = Number(toStation3); 
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
 
-            alert(`From: ${document.getElementById("fromStation3").selectedOptions[0].text}
-To: ${document.getElementById("toStation3").selectedOptions[0].text}
-Fare: PHP ${finalFare.toFixed(2)}`);
-        }
-
-        function calculateFare4(){
-            let fromStation4 = document.getElementById("fromStation4").value;
-            let toStation4 = document.getElementById("toStation4").value;
-            let discount = document.getElementById("specialDiscount4").value;
-            
-            if (fromStation4 === "none" || toStation4 === "none"){
-                alert("Please select both stations.");
+            if (fromStationValue === toStationValue){
+                alert("Origin and destination stations cannot be the same.");
                 return;
             }
-            let baseFare = Number(toStation4);
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
 
-            alert(`From: ${document.getElementById("fromStation4").selectedOptions[0].text}
-To: ${document.getElementById("toStation4").selectedOptions[0].text}
-Fare: PHP ${finalFare.toFixed(2)}`);
-        }
-
-
-    //LRT-2
-        function calculateFare5(){
-            let fromStation5 = document.getElementById("fromStation5").value;
-            let toStation5 = document.getElementById("toStation5").value;
-            let discount = document.getElementById("specialDiscount5").value;
             
-            if (fromStation5 === "none" || toStation5 === "none"){
-                alert("Please select both stations.");
-                return;
-            }
-            let baseFare = Number(toStation5); 
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
+            let distance = Math.abs(toStationValue - fromStationValue);
 
-            alert(`From: ${document.getElementById("fromStation5").selectedOptions[0].text}
-To: ${document.getElementById("toStation5").selectedOptions[0].text}
-Fare: PHP ${finalFare.toFixed(2)}`);
-        }
-
-        function calculateFare6(){
-            let fromStation6 = document.getElementById("fromStation6").value;
-            let toStation6 = document.getElementById("toStation6").value;
-            let discount = document.getElementById("specialDiscount6").value;
             
-            if (fromStation6 === "none" || toStation6 === "none"){
-                alert("Please select both stations.");
-                return;
-            }
-            let baseFare = Number(toStation6);
-            let finalFare = discount !== "none" ? baseFare * (1 - Number(discount)) : baseFare;
+            let baseFare = 15;
+            let ratePerStation = 0.5715;
+            let totalFare = baseFare + (distance * ratePerStation);
 
-            alert(`From: ${document.getElementById("fromStation6").selectedOptions[0].text}
-To: ${document.getElementById("toStation6").selectedOptions[0].text}
+            //
+            let finalFare = totalFare;
+            if (!isNaN(discountValue) && discountValue > 0) {
+                finalFare = totalFare * (1 - discountValue);
+            }
+
+    //
+    alert(`From: ${fromStationElement.selectedOptions[0].text}
+To: ${toStationElement.selectedOptions[0].text}
 Fare: PHP ${finalFare.toFixed(2)}`);
-        }
+}
+
+        function calculateFare2(fromStation2, toStation2, specialDiscount2){
+    let fromStationElement = document.getElementById(fromStation2);
+    let toStationElement = document.getElementById(toStation2);
+    let discountElement = document.getElementById(specialDiscount2);
+
+    let fromStationValue = parseInt(fromStationElement.value);
+    let toStationValue = parseInt(toStationElement.value);
+    let discountValue = parseFloat(discountElement.value) || 0;
+
+    // Ensure valid selections
+    if (isNaN(fromStationValue) || isNaN(toStationValue)) {
+        alert("Please select both stations.");
+        return;
+    }
+
+    if (fromStationValue === toStationValue) {
+        alert("Origin and destination stations cannot be the same.");
+        return;
+    }
+
+    // Calculate absolute difference between stations
+    let distance = Math.abs(toStationValue - fromStationValue);
+
+    // Define base fare and rate per station
+    let baseFare = 15; // Base fare in PHP
+    let ratePerStation = 0.5715; // PHP per station traveled
+    let totalFare = baseFare + (distance * ratePerStation);
+
+    // Apply discount if applicable
+    let finalFare = totalFare * (1 - discountValue);
+
+    // Display fare
+    alert(`From: ${fromStationElement.selectedOptions[0].text}
+To: ${toStationElement.selectedOptions[0].text}
+Fare: PHP ${finalFare.toFixed(2)}`);
+}
+    
+    function scrollToSection(sectionId){
+        event.preventDefault();
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
     </script>
 </body>
 </html>
