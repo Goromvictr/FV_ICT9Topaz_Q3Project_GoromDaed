@@ -182,7 +182,7 @@
 
     <div class="container4" id="home">
     <center>
-        <div class="container6">
+        <div class="container6 container-fluid">
             <h1>LRT-1 Fare Guide</h1>
         </div>
     </center>
@@ -348,7 +348,7 @@
 
     <br><br>
 
-    <div class="container5" class="container text-center mx-auto" id="schedule">
+    <div class="container5 text-center mx-auto" style="max-width: 90%;" class="container text-center mx-auto" id="schedule">
         <center>
             <h2>Transit Schedule</h2>
         </center>
@@ -506,5 +506,12 @@ Fare: PHP ${finalFare.toFixed(2)}`);
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     }
     </script>
-</body>
+
+        <script>
+            function scrollToSection(sectionId) {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+        </body>
+        
 </html>
