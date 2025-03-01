@@ -96,6 +96,10 @@
         button.btn-successw-100, button.btn-warningw-100{
             width: 100%; 
         }
+        .references-container{
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
         .navbar{
             background-color: #f8cfbb;
             position: sticky;
@@ -369,49 +373,56 @@
     <br><br>
 
     <div class="container4" id="tips">
-    <center>
-        <div class="container6">
-            <h1><b>Tips for Commuting with the LRT</b></h1>
-        </div>
-    </center>
-
-    <br>
-
-    <div class="container6">
         <center>
-            <p style="font-size: 36px;">How to Purchase Tickets</p>
-                <ul>Find the ticket vending machine or booth at any station.</ul>
-                <ul>Pick either a single-journey ticket or load your Beep card.</ul>
-                <ul>For Beep cards, you can tap them at the turnstile to access them, and you can use them until your balance runs out.</ul>
-                <ul>Using a Beep card saves time and ensures quicker entry and exit through busy stations, making it a better option for daily riders.</ul>
-
-                <br>
-
-            <p style="font-size: 36px;">Operating Hours</p>
-                <ul>The Manila LRT-1 operates from 4:30 AM to 10:00 PM, Monday through Sunday.</ul>
-                <br>
-                <ul>Expect some changes in operation hours during public holidays or major city events.</ul>
-                <ul>Early risers and late travelers should plan their journeys carefully to avoid missing the last train.</ul>
-
-                <br>
-
-        <p style="font-size: 36px;">Make Your Journey Hassle-Free and Stress-Free</p>
-                <ul>Use Commuter Apps like Google Maps to map out your LRT-1 ride</ul>
-                <ul>Reload your card in advance to avoid long queues</ul>
-                <ul>Travel during Off-Peak Hours to see fewer passengers</ul>
-                <ul>Mind Your Belongings</ul>
-
-                <br>
-
-        <p style="font-size: 36px;">Customer Etiquette Tips</p>
-                <ul>Always queue properly when boarding or waiting for trains.</ul>
-                <ul>Prioritise designated seats for the elderly, pregnant women, and PWDs</ul>
-                <ul>Avoid blocking doors to ensure easier and faster boarding for everyone.</ul>
+            <div class="container6">
+                <h1><b>Tips for Commuting with the LRT</b></h1>
+            </div>
         </center>
+
+        <br>
+
+        <div class="container6">
+            <center>
+                <p style="font-size: 36px;">How to Purchase Tickets</p>
+                    <ul>Find the ticket vending machine or booth at any station.</ul>
+                    <ul>Pick either a single-journey ticket or load your Beep card.</ul>
+                    <ul>For Beep cards, you can tap them at the turnstile to access them, and you can use them until your balance runs out.</ul>
+                    <ul>Using a Beep card saves time and ensures quicker entry and exit through busy stations, making it a better option for daily riders.</ul>
+
+                    <br>
+
+                <p style="font-size: 36px;">Operating Hours</p>
+                    <ul>The Manila LRT-1 operates from 4:30 AM to 10:00 PM, Monday through Sunday.</ul>
+                    <br>
+                    <ul>Expect some changes in operation hours during public holidays or major city events.</ul>
+                    <ul>Early risers and late travelers should plan their journeys carefully to avoid missing the last train.</ul>
+
+                    <br>
+
+            <p style="font-size: 36px;">Make Your Journey Hassle-Free and Stress-Free</p>
+                    <ul>Use Commuter Apps like Google Maps to map out your LRT-1 ride</ul>
+                    <ul>Reload your card in advance to avoid long queues</ul>
+                    <ul>Travel during Off-Peak Hours to see fewer passengers</ul>
+                    <ul>Mind Your Belongings</ul>
+
+                    <br>
+
+            <p style="font-size: 36px;">Customer Etiquette Tips</p>
+                    <ul>Always queue properly when boarding or waiting for trains.</ul>
+                    <ul>Prioritise designated seats for the elderly, pregnant women, and PWDs</ul>
+                    <ul>Avoid blocking doors to ensure easier and faster boarding for everyone.</ul>
+            </center>
+        </div>
     </div>
 
-    <script> 
+    <center class="references-container">
+        <a href="https://docs.google.com/document/d/1mv9uT-ywMe8qfa3dhOZxmfrFyjNxSX33Lh8Z_FeT2Xs/edit?usp=sharing" target="_blank">
+            <button type="button" class="btn btn-success w-80">References</button>
+        </a>
+    </center>
 
+
+    <script> 
     //LRT-1
         function calculateFare1(fromStation, toStation, specialDiscount){
             let fromStationElement = document.getElementById(fromStation);
