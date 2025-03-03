@@ -169,6 +169,9 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="#tips" onclick="scrollToSection('tips')">Tips</a>
                     </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#feedback" onclick="scrollToSection('feedback')">Feedback Form</a>
+                    </li>
                 </ul>
 
                 <!-- Search Bar -->
@@ -183,7 +186,7 @@
     <div class="container4" id="home">
     <center>
         <div class="container6 container-fluid">
-            <h1>LRT-1 Fare Guide</h1>
+            <h1><b>LRT-1 Fare Guide</b></h1>
         </div>
     </center>
 
@@ -350,7 +353,7 @@
 
     <div class="container5 text-center mx-auto" style="max-width: 90%;" class="container text-center mx-auto" id="schedule">
         <center>
-            <h2>Transit Schedule</h2>
+            <h2><b>Transit Schedule</b></h2>
         </center>
     </div>
 
@@ -415,12 +418,76 @@
         </div>
     </div>
 
+    <br>
+
+    <div class="container4" id="feedback" style="width: 710px; margin-left: 40px;">
+        <center>
+            <div class="container6" style="width: 550px;">
+                <h1><b>Feedback Form</b></h1>
+            </div>
+        </center>
+
+        <br>
+
+        <form class="form-group">
+            <center>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="name"><b>Name:</b></label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="email"><b>Email:</b></label>
+                        <input type="text" class="form-control" id="email" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="how"><b>Comments:</b></label>
+                        <textarea class="form-control" id="reason" rows="4"></textarea>
+                    </div>
+                </div>
+            </center>
+        </form>
+    </div>
+
+    <div class="container4" id="feedback" style="width: 710px; margin-right: 40px; margin-top: -460.2px;">
+        <center>
+            <div class="container6" style="width: 550px;">
+                <h1><b>Contact Information</b></h1>
+            </div>
+
+            <br>
+            <div class="container6" style="width: 500px;">
+                <center>
+                    <p>Vic Gorom: 0966 573 3410</p>
+                    <p>Mary Daed: 0960 939 2789</p>
+
+                    <br>
+
+                    <p>GMail: gorom.vb@obmontessori.edu.ph</p>
+                    <p>GMail: daed.mo@obmontessori.edu.ph</p>
+                </center>
+            </div>
+        </center>
+
+        <br>
+
+    </div>
+
+    <br><br><br><br>
+
     <center class="references-container">
         <a href="https://docs.google.com/document/d/1mv9uT-ywMe8qfa3dhOZxmfrFyjNxSX33Lh8Z_FeT2Xs/edit?usp=sharing" target="_blank">
             <button type="button" class="btn btn-success w-80">References</button>
         </a>
-    </center>
 
+        <br>
+
+        <p style="color: white;">Vic Gorom & Mary Daed, 9-Topaz</p>
+    </center>
 
     <script> 
     //LRT-1
@@ -472,16 +539,6 @@ Fare: PHP ${finalFare.toFixed(2)}`);
     let fromStationValue = parseInt(fromStationElement.value);
     let toStationValue = parseInt(toStationElement.value);
     let discountValue = parseFloat(discountElement.value) || 0;
-
-    // Ensure valid selections
-    if (isNaN(fromStationValue) || isNaN(toStationValue)) {
-        alert("Please select both stations.");
-        return;
-    }
-
-    if (fromStationValue === toStationValue) {
-        alert("Origin and destination stations cannot be the same.");
-        return;
     }
 
     // Calculate absolute difference between stations
@@ -499,7 +556,6 @@ Fare: PHP ${finalFare.toFixed(2)}`);
     alert(`From: ${fromStationElement.selectedOptions[0].text}
 To: ${toStationElement.selectedOptions[0].text}
 Fare: PHP ${finalFare.toFixed(2)}`);
-}
     
     function scrollToSection(sectionId){
         event.preventDefault();
@@ -507,11 +563,11 @@ Fare: PHP ${finalFare.toFixed(2)}`);
     }
     </script>
 
-        <script>
-            function scrollToSection(sectionId) {
-                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-            }
-        </script>
-        </body>
-        
+    <script>
+        function scrollToSection(sectionId){
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
 </html>
